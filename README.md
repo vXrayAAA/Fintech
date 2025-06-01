@@ -18,11 +18,4 @@ Este projeto é uma interface web para registro de novos usuários em uma plataf
 - `src/style.css`: Estilos customizados e integração com TailwindCSS.
 - `images/Expand_left_light.svg`: Ícone de navegação.
 
-## Como executar
 
-1. Instale as dependências do projeto (se houver).
-2. Abra o arquivo `src/index.html` em seu navegador.
-
----
-
-Sinta-se à vontade para personalizar conforme a evolução do projeto!
