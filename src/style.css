@@ -1,243 +1,43 @@
 
-
-
-
+/* Estilos customizados para integração com TailwindCSS */
 body {
-    background: #1F2937;
-    min-height: 100vh;
     font-family: "Source Sans 3", sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
 }
 
-
-.container {
-    background: #1F2937;
-    width: 100%;
-    max-width: 400px;
-    margin: 32px auto;
-    padding: 32px 16px;
-    border-radius: 24px;
-    box-sizing: border-box;
-    
+/* Melhorias para inputs com ícones */
+.relative input:focus + div svg {
+    color: #3b82f6;
 }
 
-h1 {
-    color: #e6e6e6;
-    font-size: 2.5rem;
-    margin-bottom: 32px;
-    font-weight: 700;
-}
-
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-
-label {
-    color: #e6e6e6;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 4px;
-}
-
-input {
-    padding: 14px 16px;
-    border-radius: 24px;
-    border: none;
-    background: #fff;
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-    outline: none;
-    transition: box-shadow 0.2s;
-}
-
-
-input:focus {
-    box-shadow: 0 0 0 2px #6c7a89;
-}
-
-button[type="submit"] 
-{
-    margin-top: 18px;
-    padding: 16px 0;
-    border-radius: 24px;
-    border: none;
-    background: #cfd2d6;
-    color: #8c8c8c;
-    font-size: 1.3rem;
-    font-style: italic;
-    font-weight: 600;
-    cursor: not-allowed;
-    transition: background 0.2s;
-}
-
-
-.login-link {
-    color: #e6e6e6;
-    text-align: center;
-    margin-top: 24px;
-    font-size: 1.1rem;
-}
-
-.login-link a {
-    color: #e6e6e6;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.header-row {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 64px;
-    margin-bottom: 32px;
-    margin-left: 4px;
-    margin-top: -80px;
-}
-
-.icon-back {
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.icon-back:hover {
+/* Animações suaves para botões */
+button[type="button"]:hover svg {
     transform: scale(1.1);
+    transition: transform 0.2s ease;
 }
 
-.senha-group {
-    position: relative;
-    display: flex;
-    align-items: center;
+/* Estilo customizado para o botão desabilitado */
+button:disabled {
+    cursor: not-allowed !important;
 }
 
-.senha-group input[type="password"] {
-    flex: 1;
-    padding-right: 40px;
+/* Melhoria na transição do ícone de voltar */
+.cursor-pointer:hover {
+    filter: brightness(1.2);
 }
 
-.senha-icon {
-    position: absolute;
-    right: 16px;
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-    fill: #bdbdbd;
-}
-
-input, textarea {
-    caret-color: #6c7a89;
-    transition: caret-color 0.3s;
-}
-
-.custom-caret {
-    position: absolute;
-    width: 2px;
-    height: 1.4em;
-    background: #6c7a89;
-    animation: blink-caret 1.2s steps(1) infinite;
-    border-radius: 1px;
-    pointer-events: none;
-    z-index: 2;
-}
-
-/* Ajuste para melhor integração com Bootstrap */
-label.form-label {
-    color: #e6e6e6;
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 4px;
-}
-
-.form-control {
-    background: #fff;
-    border-radius: 16px;
-    font-size: 1.05rem;
-    margin-bottom: 8px;
-    border: none;
-    box-shadow: none;
-    padding: 12px 14px;
-    outline: none;
-    transition: box-shadow 0.2s;
-}
-
-.form-control:focus {
-    box-shadow: 0 0 0 2px #6c7a89;
-    border: none;
-}
-
-.btn-primary {
-    background: #6c7a89;
-    border: none;
-    font-style: italic;
-    font-weight: 600;
-}
-
-.btn-primary:disabled {
-    background: #cfd2d6;
-    color: #8c8c8c;
-}
-
-/* Responsividade */
-@media (max-width: 900px) {
-  .container {
-    max-width: 90%;
-    padding: 24px 8px;
-  }
-  h1 {
-    font-size: 2rem;
-  }
-  .header-row {
-    gap: 40px;
-    margin-bottom: 24px;
-    margin-top: -40px;
-  }
-}
-
-@media (max-width: 900px) {
-  .container {
-    max-width: 100%;
-    padding: 16px 4px;
-    border-radius: 12px;
-  }
-  h1 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-  label {
-    font-size: 1rem;
-  }
-  input {
-    font-size: 1rem;
-    padding: 10px 8px;
-    border-radius: 16px;
-  }
-  button[type="submit"] {
-    font-size: 1rem;
-    padding: 12px 0;
-    border-radius: 16px;
-  }
-  .header-row {
-    gap: 100px;
-    margin-bottom: 16px;
-    margin-top: -50px;
-  }
-  .icon-back {
-    width: 24px;
-    height: 24px;
-  }
-  .senha-icon {
-    width: 20px;
-    height: 20px;
-    right: 8px;
-  }
+/* Estilos para responsividade adicional */
+@media (max-width: 380px) {
+    .rounded-3xl {
+        border-radius: 1.5rem;
+    }
+    
+    .p-6 {
+        padding: 1rem;
+    }
+    
+    .text-3xl {
+        font-size: 1.75rem;
+    }
 }
 
 
